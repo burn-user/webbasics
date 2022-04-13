@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/png" href="style/logo.ico">
+    <script src="script.js" defer></script>
+    <title>Основы веб-разработки</title>
+</head>
+<body>
+    <header class="pc-top">
+        <div class="pc-top-name">
+            <div class="pc-top-name-icon"></div>
+            <h1 class="pc-top-name-text">Основы веб-разработки</h1>
+        </div>
+        <div class="pc-top-container">
+            <button class="pc-top-container-button" id="b1" onclick="openHTML()">HTML</button>
+            <button class="pc-top-container-button" id="b2" onclick="openCSS()">CSS</button>
+            <button class="pc-top-container-button" id="b3" onclick="practice()">Практика</button>
+            <button class="pc-top-container-button" id="b4" onclick="learnmore()">Узнать больше</button>
+        </div>
+    </header>
+    <div class="m-top">
+        <button onclick="Mshowmenu()">Меню</button>
+        <div class="m-top-name">Основы веб-разработки</div>
+    </div>
+    <div id="m-menu">
+        <button onclick="MopenHTML()">HTML</button>
+        <button onclick="MopenCSS()">CSS</button>
+        <button onclick="Mpractice()">Практика</button>
+        <button onclick="Mlearnmore()">Узнать больше</button>
+    </div>
+    <div class="content" id="contentHTML">
+        <h2>Для чего нужен язык HTML?</h2>
+        <div class="content-item"><span>HTML</span> - язык гипертекстовой разметки. Основная задача данного языка заключается в создании каркаса сайта и определении расположения элементов сайта на экране.</div>
+        <h2>Структура HTML-файла</h2>
+        <div class="content-code">
+            &#60;!DOCTYPE html&#62;<br>&#60;html&#62;<br>&#160;&#160;&#60;head&#62;<br>&#160;&#160;&#160;&#160;(служебная информация)<br>&#160;&#160;&#60;/head&#62;<br>&#160;&#160;&#60;body&#62;<br>&#160;&#160;&#160;&#160;(содержимое сайта)<br>&#160;&#160;&#60;/body&#62;<br>&#60;/html&#62;
+        </div>
+        <div class="content-item">Язык HTML состоит из единиц, называемых <span>тегами.</span> Это специальные команды, выполняющие определённую функцию.</div>
+        <div class="content-item">Все теги можно разделить на 2 вида: парные и непарные. Отличить их довольно просто: непарные теги состоят из одного слова-команды, а парные - из двух. Например, <span>&#60;br&#62;</span> - непарный тег, а <span>&#60;h1&#62;&#60;/h1&#62;</span> - парный.</div>
+        <h2>Текст и шрифты</h2>
+        <div class="content-item">Рассмотрим наиболее популярные теги, позволяющие изменять текст.</div>
+        <div class="content-item"><span>&#60;h1&#62;&#60;/h1&#62;</span> - заголовки. Данный тег имеет 6 уровней: h1, h2, h3, h4, h5 и h6. Уровень h1 - самый главный, а h6 - минимальный. С их помощью можно создавать иерархию в тексте, распределяя заголовки текста по разным уровням.</div>
+        <div class="content-item"><span>&#60;br&#62;</span> - перенос строки. Переносит курсор на новую строчку, имитируя нажатие Enter.</div>
+        <div class="content-item"><span>&#60;p&#62;&#60;/p&#62;</span> - абзац.</div>
+        <div class="content-item"><span>&#60;b&#62;&#60;/b&#62;</span> - жирный шрифт.</div>
+        <div class="content-item"><span>&#60;strong&#62;&#60;/strong&#62;</span> - жирный шрифт + относится к элементам логической разметки, указывая браузеру на важность текста.</div>
+        <div class="content-item"><span>&#60;i&#62;&#60;/i&#62;</span> - курсив.</div>
+        <div class="content-item"><span>&#60;u&#62;&#60;/u&#62;</span> - подчёркнутый текст.</div>
+        <div class="content-item"><span>&#60;strike&#62;&#60;/strike&#62;</span> - перечёркнутый текст.</div>
+        <div class="content-item"><span>&#60;sup&#62;&#60;/sup&#62;</span> - верхний индекс.</div>
+        <div class="content-item"><span>&#60;sub&#62;&#60;/sub&#62;</span> - нижний индекс.</div>
+        <div class="content-item"><span>&#60;a&#62;&#60;/a&#62;</span> - ссылка.</div>
+        <div class="content-code">
+            &#60;a href="page.html"&#62;ссылка&#60;/a&#62;
+        </div>
+        <div class="content-item"><span>href</span> - <span>атрибут</span> тега <span>&#60;a&#62;&#60;/a&#62;</span>. В кавычках необходимо указать ссылку на сайт или элемент страницы.</div>
+        <div class="content-item"><span>&#60;ul&#62;&#60;/ul&#62;</span> - маркированный список.</div>
+        <div class="content-item"><span>&#60;ol&#62;&#60;/ol&#62;</span> - нумерованный список.</div>
+        <div class="content-item"><span>&#60;li&#62;&#60;/li&#62;</span> - элемент списка.</div>
+        <div class="content-code">
+            &#60;ul&#62;<br>
+            &#160;&#160;&#160;&#60;li&#62;строка 1&#60;/li&#62;<br>
+            &#160;&#160;&#160;&#60;li&#62;строка 2&#60;/li&#62;<br>
+            &#160;&#160;&#160;&#60;li&#62;строка 3&#60;/li&#62;<br>
+            &#60;/ul&#62;
+        </div>
+        <div class="content-item">Стоит отметить, что данные теги (кроме последних трёх) редко используются при создании сайтов, так как их функционал удобнее реализовывать с помощью CSS.</div>
+        <h2>Структурные теги</h2>
+        <div class="content-item">Это теги, создающие структуру сайта.</div>
+        <div class="content-item"><span>&#60;div&#62;&#60;/div&#62;</span> - блок. Данный тег можно считать одним из самых популярных среди всех тегов HTML.</div>
+        <div class="content-item"><span>&#60;span&#62;&#60;/span&#62;</span> - блок со свойствами строки. Также является весьма популярным в HTML.</div>
+        <h2>Таблицы</h2>
+        <div class="content-item"><span>&#60;table&#62;&#60;/table&#62;</span> - контейнер для таблицы.</div>
+        <div class="content-item"><span>&#60;tr&#62;&#60;/tr&#62;</span> - строка.</div>
+        <div class="content-item"><span>&#60;td&#62;&#60;/td&#62;</span> - ячейка.</div>
+        <div class="content-code">
+            &#60;table&#62;<br>
+            &#160;&#160;&#160;&#60;tr&#62;<br>
+            &#160;&#160;&#160;&#160;&#160;&#160;&#60;td&#62;&#60;/td&#62;<br>
+            &#160;&#160;&#160;&#160;&#160;&#160;&#60;td&#62;&#60;/td&#62;<br>
+            &#160;&#160;&#160;&#60;/tr&#62;<br>
+            &#160;&#160;&#160;&#60;tr&#62;<br>
+            &#160;&#160;&#160;&#160;&#160;&#160;&#60;td&#62;&#60;/td&#62;<br>
+            &#160;&#160;&#160;&#160;&#160;&#160;&#60;td&#62;&#60;/td&#62;<br>
+            &#160;&#160;&#160;&#60;/tr&#62;<br>
+            &#60;/table&#62;
+        </div>
+        <h2>Изображение</h2>
+        <div class="content-item"><span>&#60;img src="picture.jpg"&#62;</span> - изображение. В атрибуте <span>src</span> необходимо указать название изображения.</div>
+    </div>
+    <div class="content" id="contentCSS">
+        <h2>Для чего нужен язык CSS?</h2>
+        <div class="content-item"><span>CSS</span> - каскадные таблицы стилей. Данный язык используется для стилизации веб-сайтов, а также для более точной настройки отображения элементов сайта на экране.</div>
+        <div class="content-item">Принцип работы CSS крайне прост - обращаясь к тегам в файле HTML, вы можете прописать им какие-либо свойства (размер, цвет, границы, шрифты, анимации и т. д.), причём применять их можно в абсолютно любых комбинациях.</div>
+        <h2>Подключение к файлу HTML</h2>
+        <div class="content-item">Стили CSS применяются к тегам HTML, поэтому CSS без HTML существовать не может.</div>
+        <div class="content-item">CSS можно подключить к HTML двумя способами:</div>
+        <ul>
+            <li>Интегрировать CSS непосредственно в код HTML</li>
+            <li>Подключить отдельный файл CSS к файлу HTML</li>
+        </ul>
+        <div class="content-item">Чтобы интегрировать CSS в код HTML, необходимо использовать тег <span>&#60;style&#62;&#60;/style&#62;</span>:</div>
+        <div class="content-code">
+            &#60;body&#62;<br>
+            &#160;&#160;&#160;&#60;style&#62; (код CSS) &#60;/style&#62;<br>
+            &#60;/body&#62;
+        </div>
+        <div class="content-item">Подключить отдельный файл CSS к файлу HTML можно с помощью тега <span>&#60;link&#62;</span>:</div>
+        <div class="content-code">
+            &#60;head&#62;<br>
+            &#160;&#160;&#160;&#60;link rel="stylesheet" href="style.css"&#62;<br>
+            &#60;/head&#62;
+        </div>
+        <h2>Как применять свойства CSS к тегам HTML</h2>
+        <div class="content-item">Первым шагом вам необходимо присвоить тегу класс:</div>
+        <div class="content-code">
+            &#60;div class="abc"&#62;&#60;/div&#62;
+        </div>
+        <div class="content-item">Затем в коде CSS нужно записать следующую конструкцию:</div>
+        <div class="content-code">
+            .abc {<br>
+                &#160;&#160;&#160;(здесь прописываются какие-либо свойства)<br>
+            }
+        </div>
+        <h2>Наиболее популярные свойства CSS</h2>
+        <div class="content-item"><span>width</span> и <span>height</span> задают блоку ширину и высоту соответственно. Например: <span>width: 150px;</span> (ширина 150 пикселей).</div>
+        <div class="content-item"><span>margin</span> - внешний отступ от блока. Например: <span>margin: 10px;</span> (отступ 10 пикселей).</div>
+        <div class="content-item"><span>padding</span> - внутренний отступ блока.</div>
+        <div class="content-item"><span>color</span> - изменение цвета текста блока. Для записи данного свойства можно использовать <span>rgb()</span>: <span>color: rgb(255, 80, 124);</span>. Для некоторых цветов (белый, чёрный, синий, красный и т. д.) можно использовать запись одним словом. Например: <span>color: white;</span>.</div>
+        <div class="content-item"><span>background-color</span> - изменение цвета блока.</div>
+        <div class="content-item"><span>border</span> - граница блока. Например: <span>border: 2px solid green</span> (граница толщиной 2 пикселя, непрерывная, зелёная).</div>
+    </div>
+    <div class="content" id="contentPractice">
+        <h2>Как создать небольшую веб-страницу за 5 минут</h2>
+        <div class="content-item">Вам понадобятся всего лишь две программы: Блокнот (встроенная утилита в ОС Windows 10) и любой браузер.</div>
+        <div id="practice-slider"></div>
+    </div>
+    <div class="content" id="contentLearnMore">
+        <h2>Полезный материал для изучения языка HTML</h2>
+        <div class="content-item"><a href="https://dayte2.com/html-whats-for-start" target="_blank">С чего начать изучение HTML</a></div>
+        <div class="content-item"><a href="https://www.kadrof.ru/articles/49436" target="_blank">Где можно начать изучать HTML и CSS</a></div>
+        <div class="content-item"><a href="https://xn--90abhccf7b.xn--p1ai/verstk/s-chego-nachat-izuchenie-verstki-sajtov-kak-nachat-uchit-verstku-esli-ne-znaesh-s-chego-nachat-kogda-v-seti-tak-mnogo-infy-i-vse-idet-v-razbros-yandeks-znatoki.html" target="_blank">Ответы на некоторые вопросы</a></div>
+        <h2>Полезный материал для изучения языка CSS</h2>
+        <div class="content-item"><a href="https://allforjoomla.ru/info/1459-css-s-chego-nachat" target="_blank">Для чего нужен CSS</a></div>
+        <div class="content-item"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank">Основы CSS</a></div>
+    </div>
+</body>
+</html>
+<!--
+    <  ===  &#60;
+    >  ===  &#62;
+    &#60; &#62; &#60;/ &#62;
+    _  ===  &#160;
+-->
